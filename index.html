@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dampak Karhutla Kalsel 2026</title>
+<style>
+:root{--bg:#fff;--card:#fff;--ink:#2a211b;--mut:#7a6b5f;--line:#e8ddd0;--fire:#d9480f;--amb:#f08c00;--grn:#2f7d4f;--peat:#5c3d2e;--blu:#2b6cb0;--sh:none;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:880px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:26px;line-height:1.2;margin:4px 0 6px}
+.sub{font-size:13px;margin:0 0 16px}
+.hero{background:linear-gradient(135deg,#b3330a,#f08c00);color:#fff;border-radius:16px;padding:20px;margin-bottom:16px}
+.hero b{font-size:40px;display:block;line-height:1.1}
+.hero span{opacity:.9;font-size:13px}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--sh)}
+.k b{font-size:20px;display:block}.k span{color:var(--mut);font-size:12px}
+.tabs{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
+.tabs button.on{background:var(--fire);border-color:var(--fire);color:#fff}
+.pn{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--sh)}
+.pn.on{display:block}
+.dn{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:center}
+.dn svg{width:210px;height:210px;flex:none}
+.dn circle{cursor:pointer;transition:stroke-width .15s}
+.dn circle:hover{stroke-width:30}
+.lg{flex:1;min-width:220px}
+.row{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:14px}
+.row .nm{width:42%;min-width:110px}
+.bar{flex:1;background:var(--line);border-radius:6px;height:16px;overflow:hidden;display:flex}
+.bar i{display:block;height:100%;transition:width .4s}
+.row .v{width:84px;text-align:right;font-variant-numeric:tabular-nums;font-size:13px}
+.chips{display:flex;gap:6px;margin:0 0 10px;flex-wrap:wrap}
+.chips button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:5px 10px;font:inherit;font-size:13px;cursor:pointer}
+.chips button.on{background:var(--ink);color:var(--bg)}
+#tip{min-height:44px;margin-top:10px;padding:10px;border-radius:10px;background:var(--bg);font-size:13px;color:var(--mut)}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-bottom:14px}
+.g .k b{color:var(--fire)}
+.nt{margin-top:16px;padding:12px 14px;border-left:4px solid var(--amb);background:var(--card);border-radius:8px;font-size:13px;color:var(--mut)}
+.nt b{color:var(--ink)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px}
+h3{margin:0 0 10px;font-size:16px}
+#tip{background:#faf6f1}
+.sub{color:var(--mut)}
+.hero{border:0}
+</style>
+</head>
+<body>
+<div class="w">
+<h1>Dampak Karhutla Kalimantan Selatan 2026</h1>
+<p class="sub">Kajian cepat BNPB per 18 Oktober 2026 · metode DaLA · citra Sentinel-2 &amp; Landsat-8 (NBR/dNBR) · <b>bersifat sementara</b></p>
+<div class="hero"><b>Rp12,15 triliun</b><span>estimasi kerusakan dan kerugian · 14.080,30 hektare hutan &amp; lahan terbakar</span></div>
+<div class="kp">
+<div class="k"><b>Rp9,23 T</b><span>Kerusakan langsung (75,97%)</span></div>
+<div class="k"><b>Rp2,92 T</b><span>Kerugian ekonomi tidak langsung</span></div>
+<div class="k"><b>18.423</b><span>Kasus ISPA</span></div>
+<div class="k"><b>184</b><span>Penerbangan tertunda/batal</span></div>
+</div>
+<div class="tabs" id="tabs">
+<button class="on" data-t="a">Komposisi nilai</button>
+<button data-t="b">Luas terbakar</button>
+<button data-t="c">Dampak sosial-ekonomi</button>
+</div>
+
+<div class="pn on" id="a">
+<div class="dn">
+<svg viewBox="0 0 120 120" id="donut" role="img" aria-label="Komposisi kerusakan dan kerugian"></svg>
+<div class="lg">
+<div class="chips" id="dch"></div>
+<div id="dbars"></div>
+</div>
+</div>
+<div id="tip">Klik segmen donat atau tombol untuk melihat rincian komponen.</div>
+</div>
+
+<div class="pn" id="b">
+<h3>Luas area terbakar per wilayah (hektare)</h3>
+<div class="chips" id="lch"></div>
+<div id="lbars"></div>
+<div id="ltip" style="margin-top:8px;font-size:13px;color:var(--mut)">
+<span class="dot" style="background:var(--amb)"></span>Lahan mineral 10.142,30 ha (72%) &nbsp; <span class="dot" style="background:var(--peat)"></span>Gambut 3.938 ha (28%)</div>
+</div>
+
+<div class="pn" id="c">
+<div class="g">
+<div class="k"><b>18.423 orang</b><span>ISPA · estimasi Rp710 miliar</span></div>
+<div class="k"><b>28 hari</b><span>Belajar jarak jauh · Rp140 miliar</span></div>
+<div class="k"><b>4.800 UMKM</b><span>Omzet turun hingga 50% · pariwisata &amp; UMKM Rp120 miliar (50 hari)</span></div>
+<div class="k"><b>184 penerbangan</b><span>Ditunda/dibatalkan · Rp90 miliar</span></div>
+</div>
+<h3>Kerugian tidak langsung (Rp miliar)</h3>
+<div id="cbars"></div>
+<p style="font-size:13px;color:var(--mut);margin:10px 0 0">Wilayah terdampak: wisata sungai &amp; Pasar Terapung Banjarmasin, hutan kota Banjarbaru, kawasan konservasi bekantan di Banjar dan Tapin. UMKM terdampak mencakup purun, sasirangan, dan kuliner.</p>
+</div>
+
+<div class="nt"><b>Catatan data.</b> Hasil kajian masih sementara dan sejumlah komponen perlu diverifikasi karena ada ketidaksesuaian antara angka valuasi dan asumsi satuan. Nilai bertanda <b>*</b> adalah turunan hitungan (selisih dari total), bukan angka yang disebut langsung dalam kajian. Angka 1.111.111 anak terdampak pendidikan juga tampak perlu dicek ulang.</div>
+</div>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+function rp(m){return m>=1000?"Rp"+(m/1000).toFixed(2).replace(".",",")+" T":"Rp"+Math.round(m).toLocaleString("id-ID")+" M"}
+function nf(n){return n.toLocaleString("id-ID",{maximumFractionDigits:2})}
+var D={
+ all:{n:"Semua",items:[["Kerusakan langsung",9230,"--fire"],["Kerugian tidak langsung",2920,"--amb"]]},
+ dir:{n:"Kerusakan langsung",items:[["Keanekaragaman hayati*",6427.76,"--grn"],["Perkebunan, HTI, sawit &amp; karet",2030,"--fire"],["Fungsi hidrologis gambut",772.24,"--blu"]]},
+ los:{n:"Kerugian tidak langsung",items:[["Kesehatan",710,"--fire"],["Darurat &amp; pemadaman",390,"--amb"],["Pendidikan",140,"--blu"],["Pariwisata &amp; UMKM",120,"--grn"],["Transportasi &amp; logistik",90,"--peat"],["Emisi karbon, dll.*",1470,"--mut"]]}
+};
+var cur="all";
+function drawDonut(){
+ var s=$("donut"),it=D.all.items,tot=12150,r=42,C=2*Math.PI*r,off=0,h="";
+ it.forEach(function(x,i){var l=x[1]/tot*C;
+  h+='<circle data-k="'+(i?"los":"dir")+'" cx="60" cy="60" r="'+r+'" fill="none" stroke="var('+x[2]+')" stroke-width="'+((cur==="dir"&&!i)||(cur==="los"&&i)?30:22)+'" stroke-dasharray="'+l+' '+(C-l)+'" stroke-dashoffset="'+(-off)+'" transform="rotate(-90 60 60)"/>';
+  off+=l});
+ h+='<text x="60" y="58" text-anchor="middle" font-size="9" font-weight="700" fill="var(--ink)">Rp12,15 T</text><text x="60" y="70" text-anchor="middle" font-size="6" fill="var(--mut)">total estimasi</text>';
+ s.innerHTML=h;
+ s.querySelectorAll("circle").forEach(function(c){c.onclick=function(){setD(c.getAttribute("data-k"))}});
+}
+function setD(k){cur=k;drawDonut();
+ document.querySelectorAll("#dch button").forEach(function(b){b.classList.toggle("on",b.dataset.k===k)});
+ var it=D[k].items,mx=Math.max.apply(null,it.map(function(x){return x[1]})),h="";
+ it.forEach(function(x){h+='<div class="row"><span class="nm">'+x[0]+'</span><span class="bar"><i style="width:'+(x[1]/mx*100)+'%;background:var('+x[2]+')"></i></span><span class="v">'+rp(x[1])+'</span></div>'});
+ $("dbars").innerHTML=h;
+ $("tip").textContent=k==="all"?"Kerusakan langsung menyumbang 75,97% dari total; sisanya kerugian ekonomi tidak langsung.":k==="dir"?"Keanekaragaman hayati (plasma nutfah) adalah komponen terbesar. Nilainya dihitung dari selisih total (*).":"Total Rp2,92 triliun. Komponen bertanda * adalah selisih dari rincian yang disebut dalam kajian.";
+}
+$("dch").innerHTML=Object.keys(D).map(function(k){return '<button data-k="'+k+'">'+D[k].n+'</button>'}).join("");
+document.querySelectorAll("#dch button").forEach(function(b){b.onclick=function(){setD(b.dataset.k)}});
+setD("all");
+
+var L=[["Kab. Banjar",5014.12,2040],["Kab. Tapin",1850.22,1150],["Kota Banjarbaru",2124,415],["Kab. Tanah Laut",817.5,null],["Kab. Hulu Sungai Selatan",343.15,null]];
+var lf="all";
+$("lch").innerHTML=[["all","Total"],["min","Mineral"],["gam","Gambut"]].map(function(x){return '<button data-k="'+x[0]+'">'+x[1]+'</button>'}).join("");
+function drawL(){
+ document.querySelectorAll("#lch button").forEach(function(b){b.classList.toggle("on",b.dataset.k===lf)});
+ var rows=L.map(function(x){var m=x[1],g=x[2]||0;return [x[0],lf==="gam"?(x[2]==null?0:g):lf==="min"?m:m+g,lf==="gam"?0:m,lf==="min"?0:g,x[2]==null]});
+ var mx=Math.max.apply(null,rows.map(function(r){return r[1]}))||1,h="";
+ rows.sort(function(a,b){return b[1]-a[1]});
+ rows.forEach(function(r){
+  var note=r[4]?" (rincian jenis lahan tidak disebut)":"";
+  var tot=r[4]&&lf!=="gam"?r[1]:r[1];
+  var mineralW=r[4]&&lf==="all"?r[1]:r[2];
+  h+='<div class="row" data-n="'+r[0]+'" data-m="'+(r[4]&&lf==="all"?r[1]:r[2])+'" data-g="'+r[3]+'" data-u="'+(r[4]?1:0)+'"><span class="nm">'+r[0]+'</span><span class="bar"><i style="width:'+(mineralW/mx*100)+'%;background:var(--amb)"></i><i style="width:'+(r[3]/mx*100)+'%;background:var(--peat)"></i></span><span class="v">'+nf(tot)+'</span></div>';
+ });
+ $("lbars").innerHTML=h;
+ $("lbars").querySelectorAll(".row").forEach(function(el){
+  var f=function(){var m=+el.dataset.m,g=+el.dataset.g;$("ltip").innerHTML="<b>"+el.dataset.n+"</b>: "+(el.dataset.u==="1"&&lf==="all"?nf(m)+" ha (rincian mineral/gambut tidak dirinci)":"mineral "+nf(m)+" ha · gambut "+nf(g)+" ha")};
+  el.onmouseenter=f;el.onclick=f});
+}
+document.querySelectorAll("#lch button").forEach(function(b){b.onclick=function(){lf=b.dataset.k;drawL()}});
+drawL();
+
+var C2=[["Kesehatan (ISPA)",710,"--fire"],["Darurat &amp; pemadaman",390,"--amb"],["Pendidikan",140,"--blu"],["Pariwisata &amp; UMKM",120,"--grn"],["Transportasi &amp; logistik",90,"--peat"]];
+$("cbars").innerHTML=C2.map(function(x){return '<div class="row"><span class="nm">'+x[0]+'</span><span class="bar"><i style="width:'+(x[1]/710*100)+'%;background:var('+x[2]+')"></i></span><span class="v">Rp'+x[1]+' M</span></div>'}).join("")+'<div class="row" style="color:var(--mut)"><span class="nm">Emisi karbon, dll.*</span><span class="bar"><i style="width:'+(1470/710*100>100?100:1470/710*100)+'%;background:var(--mut);opacity:.5"></i></span><span class="v">≈Rp1.470 M</span></div>';
+
+$("tabs").querySelectorAll("button").forEach(function(b){b.onclick=function(){
+ $("tabs").querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});
+ document.querySelectorAll(".pn").forEach(function(p){p.classList.toggle("on",p.id===b.dataset.t)});
+}});
+</script>
+</body>
+</html>
